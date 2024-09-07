@@ -21,11 +21,6 @@ body{
     color: white;
 }
 body{
-    background: url('bunga2.png');
-    color: white;
-}
-body{
-    background: url('tree1.jpg'), url('field1.jpg');
-    background-repeat: no-repeat, repeat;
+    background: url('Bunga2.png');
     color: white;
 }
