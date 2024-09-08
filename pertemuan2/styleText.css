@@ -3,3 +3,6 @@
     text-align: center; /*soal 16 */
     text-decoration: underline; /*soal 15 */
 }
+.par1 {
+    letter-spacing: 5px; 
+}
