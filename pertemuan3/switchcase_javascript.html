@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Percabangan switch/case</title>
+    </head>
+    <body>
+        <script>
+            var jawab = prompt("kamu beruntung! silahkan pilih hadiahmu, masukkan angka 1-5")
+            var hadiah = "";
+                switch(jawab){
+                    case "1":
+                        hadiah = "tisu";
+                        break;
+                    case "2":
+                        hadiah = "sapu";
+                        break;
+                    case "3":
+                        hadiah = "buku";
+                        break;
+                    case "4":
+                        hadiah = "tikar";
+                        break;
+                    case "5":
+                        hadiah = "uang Rp 50.000";
+                        break;
+                    default:
+                        document.write("<p>Oops! anda salah pilih</p>");
+                    }
+                    if(hadiah == ""){
+                        document.write("<p>kamu gagal mendapat hadiah</p>");
+                    }else{
+                        document.write("<h2>kamu mendapatkan hadiah "+ hadiah +"</h2>");
+                    }
+                
+       </script>
+    </body>
+</html>
