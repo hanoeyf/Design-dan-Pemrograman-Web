@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <img src="langit.jpg" alt="Gambar di Paling Atas" class="top-image">
+    <hr> 
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+
+        <form method="post">
+            <div class="inputGroup">
+                <label for="name">Nama :</label>
+                <input type="text" id="name" name="name" size="30">
+            </div>
+
+            <div class="inputGroup">
+                <label for="address">Alamat :</label>
+                <textarea id="address" name="address" rows="4" cols="30" placeholder="Isi alamat anda"></textarea>
+            </div>
+
+            <div class="inputGroup">
+                <label for="dob">Tanggal Lahir :</label>
+                <input type="text" id="dob" name="dob">
+            </div>
+
+            <div class="inputGroup">
+                <label>Jenis Kelamin :</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="Laki-laki">
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <label for="female">Perempuan</label>
+                </div>
+            </div>
+
+            <div class="inputGroup">
+                <label for="hobby">Hobby :</label>
+                <input type="text" id="hobby" name="hobby" size="30">
+            </div>
+
+            <div class="inputGroup">
+                <label for="occupation">Pekerjaan :</label>
+                <input type="text" id="occupation" name="occupation" size="30">
+            </div>
+
+            <div class="inputGroup checkbox">
+                <input type="checkbox" id="dataConsent" name="dataConsent">
+                <label for="dataConsent">Check jika anda mengirimkan data ini</label>
+            </div>
+
+            <div class="inputGroup">
+                <input type="submit" value="Cek" class="submit-btn">
+            </div>
+        </form>
+
+    </body>
+</html>
