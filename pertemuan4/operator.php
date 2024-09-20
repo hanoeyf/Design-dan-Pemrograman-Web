@@ -55,4 +55,9 @@ echo "\$a /= \$b; Hasil: " . $a . "<br>";
 $a %= $b;
 echo "\$a %= \$b; Hasil: " . $a . "<br>";
 
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;
+
+echo "Hasil Identik: " . $hasilIdentik . "<br>";
+echo "Hasil Tidak Identik: " . $hasilTidakIdentik . "<br>";
 ?>
