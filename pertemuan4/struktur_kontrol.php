@@ -29,5 +29,5 @@ $jumlahBuah = 0;
 for ($i = 1; $i <= $jumlahLahan; $i++) {
 $jumlahBuah += ($tanamanPerLahan * $buahPerTanaman);
 }
-echo "Jumlah buah yang akan dipanen adalah: $jumlahBuah";
+echo " Jumlah buah yang akan dipanen adalah: $jumlahBuah";
 ?>
