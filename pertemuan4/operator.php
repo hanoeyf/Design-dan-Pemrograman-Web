@@ -39,4 +39,20 @@ echo "Hasil AND: " . $hasilAND . "<br>";
 echo "Hasil OR: " . $hasilOr . "<br>";
 echo "Hasil Not A: " . !$a . "<br>";
 echo "Hasil Not B: " . !$b . "<br>";
+
+$a += $b;
+echo "\$a += \$b; Hasil: " . $a . "<br>";
+
+$a -= $b;
+echo "\$a -= \$b; Hasil: " . $a . "<br>";
+
+$a *= $b;
+echo "\$a *= \$b; Hasil: " . $a . "<br>";
+
+$a /= $b;
+echo "\$a /= \$b; Hasil: " . $a . "<br>";
+
+$a %= $b;
+echo "\$a %= \$b; Hasil: " . $a . "<br>";
+
 ?>
