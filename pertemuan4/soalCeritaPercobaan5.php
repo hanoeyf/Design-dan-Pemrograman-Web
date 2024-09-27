@@ -1,5 +1,4 @@
 <?php
-
 $siswa = [
     ['nama' => 'Alice', 'nilai' => 85],
     ['nama' => 'Bob', 'nilai' => 92],
@@ -7,7 +6,6 @@ $siswa = [
     ['nama' => 'David', 'nilai' => 64],
     ['nama' => 'Eva', 'nilai' => 90],
 ];
-
 
 $totalNilai = 0;
 $jumlahSiswa = count($siswa);
