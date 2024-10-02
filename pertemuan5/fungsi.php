@@ -13,5 +13,13 @@ echo "<hr>";
 $saya = "hanifah";
 $ucapanSalam = "selamat pagi";
 
-perkenalan($saya);
+perkenalan($saya, $ucapanSalam);
+
+//Fungsi yang Mengembalikan Nilai
+
+function hitungUmur($thn_Lahir, $thn_sekarang){
+    $umur = $thn_sekarang - $thn_Lahir;
+    return $umur;
+}
+echo "umur saya adalah ". hitungUmur(2004, 2024) ." tahun"
 ?>
