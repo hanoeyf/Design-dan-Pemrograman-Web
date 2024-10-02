@@ -9,8 +9,9 @@ echo "Senang bertemu dengan anda <br/>";
 perkenalan("hamdana", "halo");
 
 echo "<hr>";
+
 $saya = "hanifah";
 $ucapanSalam = "selamat pagi";
 
-perkenalan($saya,$ucapanSalam);
+perkenalan($saya);
 ?>
