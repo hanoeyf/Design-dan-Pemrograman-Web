@@ -2,11 +2,13 @@
 function perkenalan($nama, $salam){
 echo $salam.", "; 
 echo "Perkenalkan, nama saya ". $nama. "<br/>"; 
-echo "Senang bertemu dengan anda <br/>";
 
+//Memangil Funsi di dalam fungsi
+echo "saya berusia ". hitungUmur(2004, 2024) ." tahun<br/>";
+echo "Senang bertemu dengan anda <br/>";
 }
 
-perkenalan("hamdana", "halo");
+perkenalan("Hanifah", "halo");
 
 echo "<hr>";
 
@@ -22,4 +24,7 @@ function hitungUmur($thn_Lahir, $thn_sekarang){
     return $umur;
 }
 echo "umur saya adalah ". hitungUmur(2004, 2024) ." tahun"
+
+
+
 ?>
