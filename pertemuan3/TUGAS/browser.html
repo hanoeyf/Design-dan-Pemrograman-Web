@@ -1,57 +1,117 @@
 <!DOCTYPE html>
 <html lang="id">
     <head>
-        <img src="langit.jpg" alt="Gambar di Paling Atas" class="top-image">
-    <hr> 
-    <link rel="stylesheet" href="style.css">
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulir Data Diri</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
     <body>
 
-        <form method="post">
+        <img src="langit.jpg" alt="Gambar di Paling Atas" class="top-image">
+        <hr>
+
+        <form id="dataForm" method="post">
             <div class="inputGroup">
                 <label for="name">Nama :</label>
-                <input type="text" id="name" name="name" size="30">
+                <input type="text" id="name" name="name" size="30" required>
             </div>
 
             <div class="inputGroup">
                 <label for="address">Alamat :</label>
-                <textarea id="address" name="address" rows="4" cols="30" placeholder="Isi alamat anda"></textarea>
+                <textarea id="address" name="address" rows="4" cols="30" placeholder="Isi alamat anda" required></textarea>
             </div>
 
             <div class="inputGroup">
                 <label for="dob">Tanggal Lahir :</label>
-                <input type="text" id="dob" name="dob">
+                <input type="date" id="dob" name="dob" required>
             </div>
 
             <div class="inputGroup">
                 <label>Jenis Kelamin :</label>
                 <div class="gender-options">
-                    <input type="radio" id="male" name="gender" value="Laki-laki">
+                    <input type="radio" id="male" name="gender" value="Laki-laki" required>
                     <label for="male">Laki-laki</label>
-                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <input type="radio" id="female" name="gender" value="Perempuan" required>
                     <label for="female">Perempuan</label>
                 </div>
             </div>
 
             <div class="inputGroup">
-                <label for="hobby">Hobby :</label>
-                <input type="text" id="hobby" name="hobby" size="30">
+                <label>Hobi :</label>
+                <div class="hobby-options">
+                    <input type="checkbox" id="berenang" name="hobby" value="Berenang">
+                    <label for="berenang">Berenang</label>
+                    <input type="checkbox" id="berlari" name="hobby" value="Berlari">
+                    <label for="berlari">Berlari</label>
+                    <input type="checkbox" id="lain-lain-hobi" name="hobby" value="Lain-lain">
+                    <label for="lain-lain-hobi">Lain-lain</label>
+                </div>
             </div>
 
             <div class="inputGroup">
-                <label for="occupation">Pekerjaan :</label>
-                <input type="text" id="occupation" name="occupation" size="30">
+                <label>Pekerjaan :</label>
+                <div class="occupation-options">
+                    <input type="checkbox" id="swasta" name="occupation" value="Swasta">
+                    <label for="swasta">Swasta</label>
+                    <input type="checkbox" id="pns" name="occupation" value="PNS">
+                    <label for="pns">PNS</label>
+                    <input type="checkbox" id="lain-lain-pekerjaan" name="occupation" value="Lain-lain">
+                    <label for="lain-lain-pekerjaan">Lain-lain</label>
+                </div>
             </div>
 
             <div class="inputGroup checkbox">
-                <input type="checkbox" id="dataConsent" name="dataConsent">
-                <label for="dataConsent">Check jika anda mengirimkan data ini</label>
+                <input type="checkbox" id="dataConsent" name="dataConsent" required>
+                <label for="dataConsent">Setujui untuk mengirim data ini</label>
             </div>
 
             <div class="inputGroup">
-                <input type="submit" value="Cek" class="submit-btn">
+                <input type="submit" value="Kirim" class="submit-btn">
             </div>
         </form>
+
+        <script>
+            document.getElementById('dataForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Ambil data dari form
+                const name = document.getElementById('name').value;
+                const address = document.getElementById('address').value;
+                const dob = document.getElementById('dob').value;
+                const gender = document.querySelector('input[name="gender"]:checked').value;
+
+                // Ambil hobi yang dipilih
+                const hobbies = [];
+                document.querySelectorAll('input[name="hobby"]:checked').forEach((checkbox) => {
+                    hobbies.push(checkbox.value);
+                });
+
+                // Ambil pekerjaan yang dipilih
+                const occupations = [];
+                document.querySelectorAll('input[name="occupation"]:checked').forEach((checkbox) => {
+                    occupations.push(checkbox.value);
+                });
+
+                const dataConsent = document.getElementById('dataConsent').checked;
+
+                if (dataConsent) {
+                    // Tampilkan data dalam alert
+                    alert(
+                        `Nama: ${name}\n` +
+                        `Alamat: ${address}\n` +
+                        `Tanggal Lahir: ${dob}\n` +
+                        `Jenis Kelamin: ${gender}\n` +
+                        `Hobi: ${hobbies.join(', ')}\n` +
+                        `Pekerjaan: ${occupations.join(', ')}\n` +
+                        `Data telah dikirim.`
+                    );
+                } else {
+                    alert('Anda harus menyetujui pengiriman data terlebih dahulu.');
+                }
+            });
+        </script>
 
     </body>
 </html>
