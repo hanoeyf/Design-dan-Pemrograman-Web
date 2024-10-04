@@ -12,5 +12,5 @@ $saya = "Elok";
 $ucapanSalam = "Selamat pagi";
 //memanggil lagi 
 perkenalan ($saya, );
-
+  
 ?>
