@@ -1,0 +1,22 @@
+
+.table-wrapper {
+    background-color: #f9f9f9; 
+    padding: 20px; 
+    border-radius: 5px; 
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+table {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+th, td {
+    text-align: left; 
+    padding: 10px;
+}
+
+th {
+    background-color: #cce5ff; 
+}
