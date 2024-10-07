@@ -27,7 +27,7 @@
 </head>
 <body>
 <h2><strong>Data Siswa</strong></h2>
-<div id="flip">Click to slide down panel</div>
+<div id="flip">Click to show database</div>
 
 <!-- Panel untuk menampilkan data siswa -->
 <div id="panel">
@@ -54,7 +54,7 @@
                 echo "</tr>";
             }
 
-            // Menghitung rata-rata umur
+           
             $totalUmur = array_sum($umur); 
             $jumlahSiswa = count($umur); 
             $rataRataUmur = $totalUmur / $jumlahSiswa; 
