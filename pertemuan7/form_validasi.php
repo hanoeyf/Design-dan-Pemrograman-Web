@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Form Input dengan Validasi</h1>
-    <form id= "myForm" method="post" action="proses_validasi.php">
+    <form id="myForm" method="post">
         <label for="nama">Nama: </label>
         <input type="text" id="nama" name="nama">
         <span id="nama-error" style="color: red;"></span>
@@ -19,12 +19,18 @@
 
         <input type="submit" value="Submit">
     </form>
+    <div id="hasil"></div> <!-- Tempat untuk menampilkan hasil -->
+    
     <script>
-        $(document).ready(function(){
-            $("#myForm").submit(function(event){
+        $(document).ready(function() {
+            $("#myForm").submit(function(event) {
+                event.preventDefault(); // Hentikan pengiriman form secara default
+
                 var nama = $("#nama").val();
                 var email = $("#email").val();
                 var valid = true;
+
+                // Validasi
                 if (nama === "") {
                     $("#nama-error").text("Nama harus diisi");
                     valid = false;
@@ -37,12 +43,28 @@
                 } else {
                     $("#email-error").text("");
                 }
-                if (!valid) {
-                    event.preventDefault(); // Hentikan pengiriman form jika tidak valid
+
+                
+                if (valid) {
+                
+                    var formData = $(this).serialize();
+
+                    
+                    $.ajax({
+                        url: "proses_validasi.php", 
+                        type: "POST",
+                        data: formData,
+                        success: function(response) {
+                           
+                            $("#hasil").html(response);
+                        },
+                        error: function(xhr, status, error) {
+                            $("#hasil").html("Terjadi kesalahan: " + error);
+                        }
+                    });
                 }
             });
         });
     </script>
 </body>
 </html>
-
