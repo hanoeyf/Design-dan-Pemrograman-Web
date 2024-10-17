@@ -1,5 +1,5 @@
 <?php
-$umur; //null
+$umur; //ynull
 if (isset($umur) && $umur >= 18){
     echo "Anda sudah dewasa <br>";
 }else{
