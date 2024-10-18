@@ -11,6 +11,7 @@ if(isset($_POST["submit"])){
     {
         if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $targetfile)){
             echo "File berhasil diunggah <br>";
+            echo "<img src='".$targetfile."' width='200' />";
         }
         else{ 
             echo "Gagal mengunggah file.";
